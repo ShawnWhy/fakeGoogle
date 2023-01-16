@@ -11,7 +11,7 @@ function getRandomColor() {
 for (i=0; i<characters.length; i++){
   charactersColor[characters[i]] = getRandomColor()
 }
-
+var followTrigger = 'off'
 var word;
 var wordGenerate;
 var mousePosition = {
@@ -74,6 +74,9 @@ googleFall()
 setTimeout(() => {
  crazyCrate()   
 }, 700);
+setTimeout(() => {
+    followTrigger='on';
+}, 1500);
 word = $('input').val()
 wordGenerate = setInterval(() => {
  reverse(word);   
@@ -172,7 +175,7 @@ screenLeft = $('.L3eUgb').width()
 
 var mouthFollow = setInterval(() => {
 
-    if($('.crazyMouth').length>0){
+    if($('.crazyMouth').length>0&&followTrigger=='on'){
 
     $(".crazyMouth").css('left',mousePosition.x - screenLeft/2)
     $(".crazyMouth").css('top',mousePosition.y - screenTop/2)
