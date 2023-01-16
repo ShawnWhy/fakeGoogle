@@ -74,9 +74,9 @@ googleFall()
 setTimeout(() => {
  crazyCrate()   
 }, 700);
-setTimeout(() => {
+setTimeout(() => {  
     followTrigger='on';
-}, 1500);
+}, 2500);
 word = $('input').val()
 wordGenerate = setInterval(() => {
  reverse(word);   
