@@ -74,9 +74,9 @@ googleFall()
 setTimeout(() => {
  crazyCrate()   
 }, 700);
-setTimeout(() => {  
-    followTrigger='on';
-}, 2500);
+// setTimeout(() => {  
+//     followTrigger='on';
+// }, 2500);
 word = $('input').val()
 wordGenerate = setInterval(() => {
  reverse(word);   
@@ -298,7 +298,13 @@ var fallDown = setInterval(() => {
 
 
 }, 10);
-
+$('.L3eUgb').on('mouseover','.crazyMouth',(e)=>{
+e.stopPropagation()
+e.preventDefault()
+if(followTrigger=="off"){
+    followTrigger='on'
+}
+})
 
 
 $('.L3eUgb').on('click','.crazyMouth',(e)=>{
