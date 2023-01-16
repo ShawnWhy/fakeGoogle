@@ -302,7 +302,7 @@ $('.L3eUgb').on('mouseover','.crazyMouth',(e)=>{
 e.stopPropagation()
 e.preventDefault()
 if(followTrigger=="off"){
-    followTrigger='on'
+    followTrigger='on'  
 }
 })
 
